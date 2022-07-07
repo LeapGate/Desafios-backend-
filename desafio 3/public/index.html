@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>API RESTful</title>
+	</head>
+	<body>
+		<form action="/api/productos" method="get">
+			<h2>Ver los productos!</h2>
+			<button type="submit">Ver productos</button>
+		</form>
+
+		<br />
+		<hr />
+
+		<form action="/api/productos/" method="get">
+			<span>Ingrese Id del producto correspondiente</span>
+			<br />
+			<input type="number" name="id" />
+			<br />
+			<button type="submit">Ver</button>
+		</form>
+
+		<br />
+		<hr />
+
+		<form action="/api/productos" method="post">
+			<span>Nombre del producto:</span>
+			<input type="text" name="nombre" />
+			<br />
+			<span>Precio del producto:</span>
+			<input type="number" name="precio" />
+			<br />
+			<span>Link de la imagen del producto:</span>
+			<input type="text" name="imagen" />
+			<br />
+			<button type="submit">Agregar producto</button>
+		</form>
+	</body>
+</html>
