@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+	<%- include("partials/head", {tituloWeb: "Productos"}); %>
+	<body>
+		<main class="container-lg p-3">
+			<section class="row justify-content-around"> 
+				<h1 class="col-12 text-center">Lista de productos</h1>
+				<% respuesta.forEach(element => { %>
+					<%- include("partials/product", {
+						nombre: element.nombre,
+						imagen: element.imagen,
+						precio: element.precio
+					}) %>
+				<% }); %>
+			</section>
+			<form action="/" method="get">
+				<button class="btn btn-danger" type="submit">Volver</button>
+			  </form>
+		</main>
+	</body>
+</html>

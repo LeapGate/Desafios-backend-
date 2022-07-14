@@ -1,0 +1,18 @@
+<main class="container p-3">
+  <section class="row justify-content-around">
+    {{#if respuesta}}
+      <h3 class="col-12 text-center mb-4">Producto agregado</h3>
+      <article class="col-8 col-md-6 col-lg-3 d-flex flex-column p-2 text-center">
+        <img class="img-fluid rounded" src={{respuesta.imagen}} alt={{respuesta.nombre}} />
+        <h3 class="text-secondary">{{respuesta.nombre}}</h3>
+        <b> $ {{respuesta.precio}}</b>
+      </article>
+
+      {{else}}
+      <h4 class="text-center">Alguno de los campos ha quedado sin rellenar</h4>
+    {{/if}}
+    <form action="/" method="get">
+      <button class="btn btn-danger" type="submit">Volver</button>
+    </form>
+  </section>
+</main>
