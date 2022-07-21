@@ -1,0 +1,20 @@
+xtends layout/main
+
+block content
+  main(class="container-lg")
+    section(class="row justify-content-around")
+      if respuesta
+        h2(class="col-12 text-center mb-4") Producto Agregado
+        article(class="col-8 col-md-6 col-lg-3 d-flex flex-column p-2 text-center ")
+          img(class="img-fluid rounded" src=respuesta.new.imagen, alt=respuesta.new.nombre)
+          h3(class="text-sencondary")=respuesta.new.nombre
+          b(class="my-1")="$ " + respuesta.new.precio
+
+        h2(class="col-12 text-center mb-4") Producto Sustituido
+        article(class="col-8 col-md-6 col-lg-3 d-flex flex-column p-2 text-center")
+          img(class="img-fluid rounded" src=respuesta.previous.imagen, alt=respuesta.previous.nombre)
+          h3(class="text-sencondary")=respuesta.previous.nombre
+          b="$ " + respuesta.previous.precio
+
+      else 
+        h4(class="text-center") Alguno de los campos ha quedado sin rellenar

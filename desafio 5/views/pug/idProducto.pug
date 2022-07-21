@@ -1,0 +1,15 @@
+extends layout/main
+
+block content
+  main(class="container-lg")
+    section(class="row justify-content-around")
+      if respuesta
+        h1(class="col-12 text-center mb-4") Lista de Productos 
+        article(class="col-8 col-md-6 col-lg-3 d-flex flex-column p-2 text-center")
+          img(class="img-fluid rounded" src=respuesta.imagen, alt=respuesta.nombre)
+          h3(class="text-sencondary")=respuesta.nombre
+          b="$ " + respuesta.precio
+      else 
+        h4(class="text-center") El producto no ha sido encontrado
+  form(action="/" method="get")
+    button(class="btn btn-danger" type="submit") Volver
